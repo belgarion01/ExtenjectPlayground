@@ -5,7 +5,7 @@ using UnityEngine;
 using Zenject;
 
 
-namespace Hura
+namespace Hura.Arena
 {
     public class Arena : MonoBehaviour
     {

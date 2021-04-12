@@ -3,13 +3,16 @@ using Hura;
 using UnityEngine;
 using Zenject;
 
-public class ArenaInstaller : MonoInstaller
+namespace Hura.Arena
 {
-    public override void InstallBindings()
+    public class ArenaInstaller : MonoInstaller
     {
-        Container.Bind<Champion>().WithId("Host").FromInstance(new Champion("Homigo", Random.value));
-        Container.Bind<Champion>().WithId("Challenger").FromInstance(new Champion("Challengerico", Random.value));
-        Container.Bind<List<Supporter>>().FromInstance(new List<Supporter>
-            {new Supporter(), new Supporter(), new Supporter()});
+        public override void InstallBindings()
+        {
+            Container.Bind<Champion>().WithId("Host").FromInstance(new Champion("Homigo", Random.value));
+            Container.Bind<Champion>().WithId("Challenger").FromInstance(new Champion("Challengerico", Random.value));
+            Container.Bind<List<Supporter>>().FromInstance(new List<Supporter>
+                {new Supporter(), new Supporter(), new Supporter()});
+        }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
     
-namespace Hura
+namespace Hura.Arena
 {
     public class Supporter
     {
